@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RentalROITool – Rental Cash Flow & ROI Calculator</title>
+  <meta name="description" content="Estimate rental cash flow, mortgage payment, annual cash flow, and cash-on-cash return. Simple rental property ROI calculator." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Rental Property Cash Flow & ROI Calculator</h1>
+    <p>Quickly estimate mortgage payment, monthly cash flow, annual cash flow, and cash-on-cash return.</p>
+
+    <div class="calculator">
+      <label>Purchase Price ($)</label>
+      <input type="number" id="purchasePrice" placeholder="Example: 350000" />
+
+      <label>Down Payment ($)</label>
+      <input type="number" id="downPayment" placeholder="Example: 70000" />
+
+      <label>Interest Rate (%)</label>
+      <input type="number" id="interestRate" step="0.01" placeholder="Example: 6.75" />
+
+      <label>Loan Term (years)</label>
+      <input type="number" id="loanTermYears" placeholder="Example: 30" />
+
+      <label>Monthly Rent ($)</label>
+      <input type="number" id="monthlyRent" placeholder="Example: 2800" />
+
+      <label>Monthly Operating Expenses ($)</label>
+      <input type="number" id="monthlyExpenses" placeholder="Example: 900" />
+
+      <label>Vacancy Rate (%)</label>
+      <input type="number" id="vacancyRate" step="0.1" placeholder="Example: 5" />
+
+      <button onclick="calculateRentalROI()">Calculate</button>
+
+      <div class="results" id="results"></div>
+    </div>
+
+    <div class="content">
+      <h2>How this rental property calculator works</h2>
+      <p>
+        This tool estimates your <strong>monthly mortgage payment</strong> (principal + interest), adjusts rent for a vacancy rate,
+        and calculates <strong>monthly cash flow</strong>, <strong>annual cash flow</strong>, and <strong>cash-on-cash return</strong>.
+      </p>
+
+      <h2>What is cash-on-cash return?</h2>
+      <p>
+        Cash-on-cash return compares your annual cash flow to the cash you invested (typically your down payment). It helps investors
+        compare deals quickly.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Does this include taxes, insurance, or repairs?</h3>
+      <p>
+        Include those in your “Monthly Operating Expenses” number. Many investors estimate repairs, maintenance, and management too.
+      </p>
+
+      <h3>Does this include closing costs?</h3>
+      <p>
+        Not yet. For a conservative estimate, you can add closing costs into the down payment field (or we can add a closing-cost input later).
+      </p>
+
+      <h3>Does this include appreciation?</h3>
+      <p>
+        This calculator focuses on cash flow and cash-on-cash return. Appreciation and principal paydown can be added later as an “advanced” view.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="about.html">About</a> ·
+      <a href="contact.html">Contact</a>
+      <p class="disclaimer">Disclaimer: This calculator is for informational purposes only and is not financial advice.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
